@@ -1,46 +1,82 @@
-# Project 0x0F.
+# Project 0x00.
 
-C - Function pointers
+Python - Hello, World
 
 ## Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google.
 
-* What are function pointers and how to use them
-* What does a function pointer exactly hold
-* Where does a function pointer point to in the virtual memory
+* Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
+* Who created Python
+* Who is Guido van Rossum
+* Where does the name ‘Python’ come from
+* What is the Zen of Python
+* How to use the Python interpreter
+* How to print text and variables using print
+* How to use strings
+* What are indexing and slicing in Python
+* What is the official Holberton Python coding style and how to check your code with PEP 8
 
 ### Requirements
 
-* Allowed editors: vi, vim, emacs
-* All your files will be compiled on Ubuntu 14.04 LTS
-* Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
-* All your files should end with a new line
-* A README.md file, at the root of the folder of the project is mandatory
-* Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-* You are not allowed to use global variables
-* No more than 5 functions per file
-* The only C standard library functions allowed are malloc, free and exit. Any use of functions like printf, puts, calloc, realloc etc… is forbidden
-* You are allowed to use _putchar
-* You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-* In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-* The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called function_pointers.h
-* Don’t forget to push your header file
-* All your header files should be include guarded
+## Python Scripts
 
-```
+Allowed editors: vi, vim, emacs
+All your files will be interpreted/compiled on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+All your files should end with a new line
+The first line of all your files should be exactly #!/usr/bin/python3
+A README.md file at the root of the holbertonschool-higher_level_programming repo, containing a description of the repository
+A README.md file, at the root of the folder of this project, is mandatory
+Your code should use the PEP 8 style (version 1.7.*)
+All your files must be executable
+The length of your files will be tested using wc
+
+## Shell Scripts
+
+Allowed editors: vi, vim, emacs
+All your scripts will be tested on Ubuntu 14.04 LTS
+All your scripts should be exactly two lines long (wc -l file should print 2)
+All your files should end with a new line
+The first line of all your files should be exactly #!/bin/bash
+All your files must be executable
+
+## C Scripts
+
+Allowed editors: vi, vim, emacs
+All your files will be compiled on Ubuntu 14.04 LTS
+Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+All your files should end with a new line
+Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+You are not allowed to use global variables
+No more than 5 functions per file
+In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
+The prototypes of all your functions should be included in your header file called lists.h
+Don’t forget to push your header file
+All your header files should be include guarded
+
 
 ### Tasks
 
-* 0. function that prints a name.
-* 1. function that executes a function given as a parameter on each element of an array.
-* 2. function that searches for an integer.
-* 3. program that performs simple operations.
-* 4. program that prints the opcodes of its own main function.
+0. Run Python file
+1. Run inline
+2. Hello, print
+3. Print integer
+4. Print float
+5. Print string
+6. Play with strings
+7. Copy - Cut - Paste
+8. Create a new sentence
+9. Easter Egg
+10. Linked list cycle
+11. Hello, write
+12. Compile
+13. ByteCode -> Python #1
+
 
 ### Coding style tests
 
-[Holberton Betty style test.](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl)
+PEP 8 style (version 1.7.*)
+sudo apt-get install python3-pep8
 
 
 ## Built With
@@ -52,4 +88,4 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 ## Author
 
 * **Leonardo Calderon J.** - *Initial work* - [LeoCJJ](https://github.com/leocjj)
-10/23/2019
+12/09/2019
