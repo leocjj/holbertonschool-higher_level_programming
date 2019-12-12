@@ -2,8 +2,8 @@
 
 
 from calculator_1 import add, mul, div, sub
-a = 1
-b = 2
+a = 10
+b = 5
 print('{} + {} = {}'.format(a, b, add(a, b)))
 print('{} - {} = {}'.format(a, b, sub(a, b)))
 print('{} * {} = {}'.format(a, b, mul(a, b)))
