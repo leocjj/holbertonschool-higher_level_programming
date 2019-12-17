@@ -8,7 +8,7 @@ def multiple_returns(sentence):
     if size > 0:
         first = sentence[0]
     else:
-        first = ''
+        first = None
     tup += (size,)
     tup += (first,)
 
