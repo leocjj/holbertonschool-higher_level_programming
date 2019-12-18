@@ -47,15 +47,18 @@ int is_palindrome(listint_t **head)
 	}
 
 	reve = reverse_listint(&reve);
-	print_listint(reve);
 
 	temp = *head;
 	while (temp != NULL)
 	{
 		if ((*temp).n != (*reve).n)
+		{
+			free_listint(reve);
 			return (0);
+		}
 		temp = (*temp).next;
 		reve = (*reve).next;
 	}
+	free_listint(reve);
 	return (1);
 }
