@@ -57,7 +57,7 @@ listint_t *reverse_listint(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *reve = *head, *temp = *head, *s = NULL, *s_back = NULL;
+	listint_t *reve = *head, *temp = *head, *s = NULL, *s_back, *todel;
 
 	if (*head == NULL)
 		return (1);
@@ -79,7 +79,9 @@ int is_palindrome(listint_t **head)
 	{
 		if ((*s).n != (*reve).n)
 			return (0);
+		todel = s;
 		s = (*s).next;
+		free(todel);
 		reve = (*reve).next;
 	}
 	free_listint(s_back);
