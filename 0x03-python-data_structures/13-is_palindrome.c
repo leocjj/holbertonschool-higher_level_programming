@@ -36,6 +36,9 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *reve = NULL, *temp = NULL;
 
+	if (*head == NULL)
+		return (1);
+
 	temp = *head;
 	while (temp != NULL)
 	{
