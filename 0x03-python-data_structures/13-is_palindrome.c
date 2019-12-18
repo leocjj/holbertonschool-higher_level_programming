@@ -3,12 +3,36 @@
 #include "lists.h"
 
 /**
+ * add_node - adds a new node at the beginning of a listint_t list.
+ * @head: address of a pointer to a structure of type listint_t
+ * @data: integer to add to node.
+ *
+ * Return: pointer to structure of type listint_t.
+ */
+listint_t *add_node(listint_t **head, int data)
+{
+	listint_t *p;
+
+	if (head == NULL)
+		return (NULL);
+
+	p = malloc(sizeof(listint_t));
+	if (p == NULL)
+		return (NULL);
+
+	(*p).n = data;
+	(*p).next = *head;
+	*head = p;
+
+	return (p);
+}
+
+/**
  * reverse_listint - function that reverses a listint_t linked list.
  * @head: address of a pointer to a structure of type listint_t
  *
  * Return: a pointer to the first node of the reversed list.
  */
-
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *prev = NULL;
@@ -31,33 +55,33 @@ listint_t *reverse_listint(listint_t **head)
  *
  * Return: 0 if it is not a palindrome, 1 if it is a palindrome
  */
-
 int is_palindrome(listint_t **head)
 {
-	listint_t *reve = *head, *temp = *head;
+	listint_t *reve = *head, *temp = *head, *s = NULL, *s_back = NULL;
 
 	if (*head == NULL)
 		return (1);
 
 	while (temp && temp->next && temp->next->next)
 	{
+		s = add_node(&s, reve->n);
 		reve = reve->next;
 		temp = temp->next->next;
 	}
 
-	reve = reverse_listint(&reve);
-	temp = *head;
+	s_back = s;
+	s = add_node(&s, reve->n);
 
-	while (temp != NULL && reve != NULL)
+	if (temp->next != NULL)
+		reve = reve->next;
+
+	while (s != NULL && reve != NULL)
 	{
-		if ((*temp).n != (*reve).n)
-		{
-			free_listint(reve);
+		if ((*s).n != (*reve).n)
 			return (0);
-		}
-		temp = (*temp).next;
+		s = (*s).next;
 		reve = (*reve).next;
 	}
-	free_listint(reve);
+	free_listint(s_back);
 	return (1);
 }
