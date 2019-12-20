@@ -1,10 +1,5 @@
 #!/usr/bin/python3
 
-#that converts a Roman numeral to an integer.
-
-#number will be between 1 to 3999.
-#return an integer
-#If the roman_string is not a string or None, return 0
 
 def roman_to_int(roman_string):
 
