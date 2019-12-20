@@ -12,12 +12,16 @@ def roman_to_int(roman_string):
     roman = ["I", "V", "X", "L", "C", "D", "M"]
     result = 0
     prev = 1001
+
     for i in range(len(roman_string)):
-        idx = roman.index(roman_string[i])
-        if prev >= num[idx]:
-            result = result + num[idx]
-            prev = num[idx]
+
+        char = roman.index(roman_string[i])
+
+        if prev >= num[char]:
+            result += num[char]
+            prev = num[char]
         else:
-            result = num[idx] - 2 * prev + result
-            prev = num[idx]
+            result += num[char] - 2 * prev
+            prev = num[char]
+
     return result
