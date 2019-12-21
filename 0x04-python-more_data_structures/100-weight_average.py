@@ -13,4 +13,7 @@ def weight_average(my_list=[]):
     for num in my_list:
         average += num[0]*num[1]
         counter += num[1]
-    return (average/counter)
+    if counter > 0:
+        return (average/counter)
+    else:
+        return 0
