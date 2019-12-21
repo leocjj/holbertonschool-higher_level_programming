@@ -6,11 +6,13 @@ def complex_delete(a_dictionary, value):
     if not a_dictionary:
         return a_dictionary
 
-    for key in list(a_dictionary.keys()):
-        if a_dictionary[key] == value:
-            del a_dictionary[key]
+    c_dictionary = a_dictionary.copy()
 
-    if not a_dictionary:
-        return a_dictionary
+    for key in list(c_dictionary.keys()):
+        if c_dictionary[key] == value:
+            del c_dictionary[key]
+
+    if not c_dictionary:
+        return c_dictionary
     else:
-        return a_dictionary
+        return c_dictionary
