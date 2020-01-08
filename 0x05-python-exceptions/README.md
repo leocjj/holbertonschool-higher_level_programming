@@ -13,7 +13,7 @@ Python - Exceptions
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google.
    
-   General
+### General
 
     Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
     What’s the difference between errors and exceptions
@@ -25,9 +25,9 @@ At the end of this project, you are expected to be able to explain to anyone, wi
     When do we need to implement a clean-up action after an exception
 
 
-### Requirements
+## Requirements
 
-## General
+### General
 
     Allowed editors: vi, vim, emacs
     All your files will be interpreted/compiled on Ubuntu 14.04 LTS using python3 (version 3.4.3)
@@ -39,27 +39,19 @@ At the end of this project, you are expected to be able to explain to anyone, wi
     The length of your files will be tested using wc
 
 
-
-
 ### Tasks
 
- 0. Squared simple mandatory 
- 1. Search and replace mandatory 
- 2. Unique addition mandatory 
- 3. Present in both mandatory 
- 4. Only differents mandatory 
- 5. Number of keys mandatory 
- 6. Print sorted dictionary mandatory 
- 7. Update dictionary mandatory 
- 8. Simple delete by key mandatory 
- 9. Multiply by 2 mandatory 
- 10. Best score mandatory 
- 11. Multiply by using map mandatory 
- 12. Roman to Integer mandatory 
- 13. Weighted average! #advanced 
- 14. Squared by using map #advanced 
- 15. Delete by value #advanced 
- 16. CPython #1: PyBytesObject #advanced 
+ 0. Safe list printing mandatory 
+ 1. Safe printing of an integers list mandatory 
+ 2. Print and count integers mandatory 
+ 3. Integers division with debug mandatory 
+ 4. Divide a list mandatory
+ 5. Raise exception mandatory 
+ 6. Raise a message mandatory 
+ 7. Safe integer print with error message #advanced 
+ 8. Safe function #advanced 
+ 9. ByteCode -> Python #4 #advanced 
+ 10. CPython #2: PyFloatObject #advanced 
 
 
 ### Coding style tests
@@ -77,4 +69,4 @@ sudo apt-get install python3-pep8
 ## Author
 
 * **Leonardo Calderon J.** - *Initial work* - [LeoCJJ](https://github.com/leocjj)
-12/19/2019
+01/08/2020
