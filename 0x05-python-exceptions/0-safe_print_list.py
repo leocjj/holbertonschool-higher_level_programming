@@ -3,14 +3,13 @@
 
 def safe_print_list(my_list=[], x=0):
 
-	chars_printed = 0
-	try:
-		for i in range(x):
-			print(my_list[i], end="")
-			chars_printed += 1 
-		print()
-	except:
-		print()
+    chars_printed = 0
+    try:
+        for i in range(x):
+            print(my_list[i], end="")
+            chars_printed += 1
+        print()
+    except:
+        print()
 
-	return(chars_printed)
-	
+    return(chars_printed)
