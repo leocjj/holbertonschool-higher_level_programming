@@ -1,0 +1,8 @@
+
+*.pyc
+*.py~
+*.py#
+*.c~
+0x03-python-data_structures/libPyList.so
+0x03-python-data_structures/palindrome
+*.md~
