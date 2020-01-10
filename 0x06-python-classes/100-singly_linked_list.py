@@ -42,7 +42,7 @@ class SinglyLinkedList:
         """init method."""
         self.head = None
 
-    def __repr__(self):
+    def __str__(self):
         string = ''
         curr = self.head
         while curr:
