@@ -30,7 +30,7 @@ class Square:
         return self.__position
 
     @position.setter
-    def position(self, position=(0, 0)):
+    def position(self, position):
         """setter method for __position"""
         if type(position) == tuple and len(position) == 2 and \
            type(position[0]) == int and type(position[1]) == int:
