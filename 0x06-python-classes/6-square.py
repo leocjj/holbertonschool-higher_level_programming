@@ -33,7 +33,7 @@ class Square:
     def position(self, position=(0, 0)):
         """setter method for __position"""
         if type(position) == tuple and len(position) == 2 and \
-            type(position[0]) == int and type(position[1]) == int:
+           type(position[0]) == int and type(position[1]) == int:
             if position[0] >= 0 and position[1] >= 0:
                 self.__position = position
         else:
