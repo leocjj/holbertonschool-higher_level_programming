@@ -34,6 +34,7 @@ class Node:
             raise TypeError('next_node must be a Node object')
         self.__next_node = node
 
+
 class SinglyLinkedList:
     """class for a singly linked list."""
 
@@ -67,4 +68,3 @@ class SinglyLinkedList:
         new_node.next_node = curr.next_node
         curr.next_node = new_node
         return
-
