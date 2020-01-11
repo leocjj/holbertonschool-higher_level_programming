@@ -1,4 +1,4 @@
-The ``example`` module
+The ``testmod_`` module
 ======================
 
 Using ``factorial``
@@ -7,9 +7,11 @@ Using ``factorial``
 This is an example text file in reStructuredText format.  First import
 ``factorial`` from the ``example`` module:
 
-    >>> from example import factorial
+    >>> print("Every line starting by >>>")
+    Every line starting by >>>
+    >>> from testmod_ import factorial     #specify: from file import module
 
 Now use it:
 
-    >>> factorial(6)
+    >>> factorial(5)
     120

@@ -58,7 +58,8 @@ def factorial(n):
     return result
 
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
     #print(factorial(3))
     import doctest
-    doctest.testmod(verbose=True)   #Parameter to force vervose
+    doctest.testmod()
+    #doctest.testmod(verbose=True)   #Parameter to force vervose
