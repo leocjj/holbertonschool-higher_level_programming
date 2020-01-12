@@ -4,6 +4,7 @@ readme file exist (right name, no empty)
 
 PYTHON FILES TEST
     file exist
+    file name correct
     first line: #!/usr/bin/python3
     all files are executables
     PEP 8 style (version 1.7.*) compliance
@@ -114,6 +115,9 @@ Classes
     print(type(my_square))
     print(my_square.__dict__)
     initialized with out parameter, with parameter, with different parameters
+    Right class name
+    Right methods names
+
 
 Exception type
 Exception test
