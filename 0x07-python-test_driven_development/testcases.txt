@@ -24,13 +24,22 @@ BASICS
     PEP8 validation
 
 EDGE CASES
-    is null
+    is null     None
+    is nan      float('nan')
     is 0
     is 1
     is -1
+    is float
+    is integer
+    is char
+    is string
+    is a list (empty, 1, many, too many)
+    is a tuple (empty, 1, many, too many)
+    is a dict (empty, 1, many, too many)
+    is a  (empty, 1, many, too many)
     is too big
     is too small
-    is +inf
+    is +inf     float('inf')
     is -inf
     is lower
     is greater

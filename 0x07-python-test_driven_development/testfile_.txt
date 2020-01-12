@@ -9,7 +9,7 @@ This is an example text file in reStructuredText format.  First import
 
     >>> print("Every line starting by >>>")
     Every line starting by >>>
-    >>> from testmod_ import factorial     #specify: from file import module
+    >>> factorial = __import__('testmod_').factorial
 
 Now use it:
 
