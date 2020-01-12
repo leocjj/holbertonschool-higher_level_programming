@@ -1,0 +1,183 @@
+
+repository exits (right name)
+readme file exist (right name, no empty)
+
+PYTHON FILES TEST
+    file exist
+    first line: #!/usr/bin/python3
+    all files are executables
+    PEP 8 style (version 1.7.*) compliance
+    Module documentation exist:
+        python3 -c 'print(__import__("my_module").__doc__)'
+    Function documentacion exist:
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+    Class documentation exist:
+
+BASICS
+    File is present
+    First line contains #!/usr/bin/python3
+    Correct output - positive
+    Correct output - negative
+    Correct output - zero
+    Correct output - wrong type
+    PEP8 validation
+
+EDGE CASES
+    is null
+    is 0
+    is 1
+    is -1
+    is too big
+    is too small
+    is +inf
+    is -inf
+    is lower
+    is greater
+    are equal value
+    are different value
+    are equal sign
+    are different sign
+    are equal type
+    are different type
+
+    input is other type
+    input is other size
+    input is none
+    input is empty
+    input have spaces (begining, middle, end)
+    input have tabs (begining, middle, end)
+    input have \n (begining, middle, end)
+    input have \r (begining, middle, end)
+    input have combination of chars (begining, middle, end)
+    input have no-printable chars (begining, middle, end)
+    input have no-alphanumeric chars (begining, middle, end)
+
+    operation at the begining
+    operation at the middle 
+    operation at the end
+
+    execution with  0 arguments
+    execution with  1 argument
+    execution with  2 arguments
+    execution with  several arguments
+
+    len is different from expected
+    data type different from expected
+    class type different from expected
+    output different from expected
+    output size different from expected
+    output type different from expected
+    exception type: description different from expected
+
+    stdout correct
+    stderr correct
+
+    return type
+    return value
+
+    Correct output - case: list = [1, 2, 3]
+    Correct output - case: list = [1]
+    Correct output - case: list = []
+    Correct output - case: list = None
+    Correct output - case: list = [1, 2, “H”, 9]
+
+    empty list
+    list with one element (any type)
+    list with 2 different element (same type)
+    list with twice the same element (same type)
+    list with more than 2 times the same element (same type)
+    list with multiple types (integer, string, etc…)
+    not a list argument (ex: passing a dictionary to the method)
+
+    TWO VALUES AS PARAMETERS
+    Correct output - case: tuplea = (1, 2) / tupleb = (1, 2)
+    Correct output - case: tuplea = (1, 2) / tupleb = (1, 2, 3)
+    Correct output - case: tuplea = (1, 2, 3) / tupleb = (1, 2)
+    Correct output - case: tuplea = (1, 2, 3) / tupleb = (1, 2, 3)
+    Correct output - case: tuplea = (1) / tupleb = (1, 2)
+    Correct output - case: tuplea = () / tupleb = (1, 2)
+    Correct output - case: tuplea = (1, 2) / tupleb = (1)
+    Correct output - case: tuplea = (1, 2) / tupleb = ()
+    Correct output - case: tuplea = (1) / tupleb = (1)
+    Correct output - case: tuplea = () / tupleb = ()
+
+    TRHEE VALUES AS PARAMETERS
+    Permutation of edge cases for each one
+
+    STRINGS
+    null, "",
+    lowercase, uppercase, alphanumeric, digits
+    one line, multy line
+
+Classes
+    my_square = Square()
+    print(type(my_square))
+    print(my_square.__dict__)
+    initialized with out parameter, with parameter, with different parameters
+
+Exception type
+Exception test
+
+Exception
+        ArithmeticError
+            FloatingPointError          # flot intead of int, viceversa
+            OverflowError               # too big
+            ZeroDivisionError           # 1/0,  
+        AssertionError                  
+        AttributeError
+        BufferError
+        EOFError                        # reading after EOF
+        ImportError
+            ModuleNotFoundError
+        LookupError
+            IndexError                  # index out of len
+            KeyError
+        MemoryError
+        NameError
+            UnboundLocalError
+        OSError
+            BlockingIOError
+            ChildProcessError
+            ConnectionError
+                BrokenPipeError
+                ConnectionAbortedError
+                ConnectionRefusedError
+                ConnectionResetError
+            FileExistsError
+            FileNotFoundError
+            InterruptedError
+            IsADirectoryError
+            NotADirectoryError
+            PermissionError
+            ProcessLookupError
+            TimeoutError
+        ReferenceError
+        RuntimeError
+            NotImplementedError
+            RecursionError
+        StopIteration
+        StopAsyncIteration
+        SyntaxError
+            IndentationError
+                TabError
+        SystemError
+        TypeError                       # data type diferent
+        ValueError
+            UnicodeError
+                UnicodeDecodeError
+                UnicodeEncodeError
+                UnicodeTranslateError
+        Warning
+            BytesWarning
+            DeprecationWarning
+            FutureWarning
+            ImportWarning
+            PendingDeprecationWarning
+            ResourceWarning
+            RuntimeWarning
+            SyntaxWarning
+            UnicodeWarning
+            UserWarning
+    GeneratorExit
+    KeyboardInterrupt
+    SystemExit
