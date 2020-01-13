@@ -31,6 +31,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_type(self):
         """Test different types"""
         self.assertEqual(max_integer("Texto Texto"), 'x')
+        self.assertEqual(max_integer("Texto" "Zzzzzz"), 'z')
         self.assertEqual(max_integer(" "), ' ')
         self.assertEqual(max_integer((1, 2, 3, 4)), 4)
         self.assertEqual(max_integer(), None)
