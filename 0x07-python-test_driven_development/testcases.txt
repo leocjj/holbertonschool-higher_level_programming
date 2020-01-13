@@ -118,6 +118,7 @@ EDGE CASES
     null, "",
     lowercase, uppercase, alphanumeric, digits
     one line, multy line
+    \n \t \v \r \0  as character, at the begining, in the middle or the end.
 
 Classes
     my_square = Square()

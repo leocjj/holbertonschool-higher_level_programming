@@ -1,0 +1,255 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``3-say_my_name``
+-------------------
+
+This is an example text file in reStructuredText format.
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test cases:
+
+    >>> len(say_my_name.__doc__) > 0
+    True
+
+    >>> len(__import__('3-say_my_name').__doc__) > 0
+    True
+
+    >>> say_my_name('Leonardo', 'Calderon')
+    My name is Leonardo Calderon
+
+    >>> say_my_name('leocjj', '')
+    My name is leocjj 
+
+    ******************* ONE PARAMETER *****************************************
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name('')
+    My name is  
+
+    >>> say_my_name(' ')
+    My name is   
+
+    >>> say_my_name('A')
+    My name is A 
+
+    >>> say_my_name(chr(65))
+    My name is A 
+
+    >>> say_my_name(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(-1)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(0)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(())
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name([])
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(('a'))
+    My name is a 
+
+    >>> say_my_name(['a'])
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(('a',))
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name({'a': 1})
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(00001)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid token
+
+    >>> say_my_name(-0000001)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid token
+
+    >>> say_my_name(10e1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(-10e1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(10e-1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(-10e-1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(float('nan'))
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(float('inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(float('-inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(-)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid syntax
+
+    >>> say_my_name(+)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid syntax
+
+    >>> say_my_name('1')
+    My name is 1 
+
+    >>> say_my_name("1")
+    My name is 1 
+
+    >>> say_my_name([])
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(())
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name({})
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name([1])
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name((1,))
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name({'a':1})
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name([1, 2])
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name((1, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    ************TWO PARAMETERS - SECOND WRONG *********************************
+
+    >>> say_my_name('Bob', 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name('Bob', None)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name('Bob', float('inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name('Bob', float('nan'))
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name('Bob', '1')
+    My name is Bob 1
+
+    >>> say_my_name('Bob', "1")
+    My name is Bob 1
+
+    >>> say_my_name('Bob', [1])
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name('Bob', (1,))
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name('Bob', {'a': 1})
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    ***************************  TWO PARAMETERS  ******************************
+
+    >>> say_my_name('Bob', 'Dylan')
+    My name is Bob Dylan
+
+    >>> say_my_name('qwertyuiopasdfghjklñzxcvbnm,.-¿0987654321|+.', 'Qwerty')
+    My name is qwertyuiopasdfghjklñzxcvbnm,.-¿0987654321|+. Qwerty
+
+    >>> say_my_name('', '')
+    My name is  
+
+    >>> say_my_name(None, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+
+
+
+
+

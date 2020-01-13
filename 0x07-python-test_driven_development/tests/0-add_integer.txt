@@ -11,6 +11,12 @@ First import ``factorial`` from the ``0-add_integer`` module:
 
 Test cases:
 
+    >>> len(add_integer.__doc__) > 0
+    True
+
+    >>> len(__import__('0-add_integer').__doc__) > 0
+    True
+
     >>> add_integer(1, 1)
     2
 
