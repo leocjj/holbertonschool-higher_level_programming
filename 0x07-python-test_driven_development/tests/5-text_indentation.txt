@@ -1,0 +1,270 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``5-text_indentation``
+-------------------
+
+This is an example text file in reStructuredText format.
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test cases:
+
+    >>> len(text_indentation.__doc__) > 0
+    True
+
+    >>> len(__import__('5-text_indentation').__doc__) > 0
+    True
+
+    >>> text_indentation('Leonardo Calderon')
+    Leonardo Calderon
+
+    >>> text_indentation('leocjj. github')
+    leocjj.
+    <BLANKLINE>
+    github
+
+    ******************* ONE PARAMETER *****************************************
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation('')
+
+    >>> text_indentation(' ')
+
+    >>> text_indentation('    ')
+
+    >>> text_indentation('A')
+    A
+
+    >>> text_indentation(chr(65))
+    A
+
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(-1)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(0)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(())
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation([])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(('a'))
+    a
+
+    >>> text_indentation(['a'])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(('a',))
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation({'a': 1})
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(00001)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid token
+
+    >>> text_indentation(-0000001)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid token
+
+    >>> text_indentation(10e1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(-10e1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(10e-1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(-10e-1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(float('nan'))
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(float('inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(float('-inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(-)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid syntax
+
+    >>> text_indentation(+)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid syntax
+
+    >>> text_indentation('1')
+    1
+
+    >>> text_indentation("1")
+    1
+
+    >>> text_indentation([])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(())
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation({})
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation([1])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation((1,))
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation({'a':1})
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation([1, 2])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation((1, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    # ************** ONE STRING - SPACES **************************************
+
+    >>> text_indentation('     Text text')
+    Text text
+
+    >>> text_indentation('Text text      ')
+    Text text      
+
+    # ************** ONE STRING - SPECIAL CASES *******************************
+
+    >>> text_indentation('Text text text . Text text text ')
+    Text text text .
+    <BLANKLINE>
+    Text text text 
+
+    >>> text_indentation('Text text text ? Text text text ')
+    Text text text ?
+    <BLANKLINE>
+    Text text text 
+
+    >>> text_indentation('Text text text : Text text text ')
+    Text text text :
+    <BLANKLINE>
+    Text text text 
+
+
+    >>> text_indentation('Text text text. Text text text ')
+    Text text text.
+    <BLANKLINE>
+    Text text text 
+
+    >>> text_indentation('Text text text? Text text text ')
+    Text text text?
+    <BLANKLINE>
+    Text text text 
+
+    >>> text_indentation('Text text text: Text text text ')
+    Text text text:
+    <BLANKLINE>
+    Text text text 
+
+
+    >>> text_indentation('Text text text  .Text text text ')
+    Text text text  .
+    <BLANKLINE>
+    Text text text 
+
+    >>> text_indentation('Text text text  ?Text text text ')
+    Text text text  ?
+    <BLANKLINE>
+    Text text text 
+
+    >>> text_indentation('Text text text  :Text text text ')
+    Text text text  :
+    <BLANKLINE>
+    Text text text 
+
+
+
+    >>> text_indentation('Text text text  .Text text text.')
+    Text text text  .
+    <BLANKLINE>
+    Text text text.
+    <BLANKLINE>
+
+    >>> text_indentation('Text text text  ?Text text text?')
+    Text text text  ?
+    <BLANKLINE>
+    Text text text?
+    <BLANKLINE>
+
+    >>> text_indentation('Text text text  :Text text text:')
+    Text text text  :
+    <BLANKLINE>
+    Text text text:
+    <BLANKLINE>
+
