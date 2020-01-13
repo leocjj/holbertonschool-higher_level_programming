@@ -1,0 +1,381 @@
+The ``lazy_lazy_matrix_mul`` module
+======================
+
+Using ``lazy_matrix_mul``
+-------------------
+
+This is an example text file in reStructuredText format.
+
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Test cases:
+
+    >>> len(lazy_matrix_mul.__doc__) > 0
+    True
+
+    >>> len(__import__('101-lazy_matrix_mul').__doc__) > 0
+    True
+
+    >>> lazy_matrix_mul([[1, 2],[3, 4]], [[3], [5]])
+    array([[13],
+           [29]])
+
+    >>> lazy_matrix_mul([[1, 2]], [[3],[3]])
+    array([[9]])
+
+    >>> lazy_matrix_mul([[1, 2],[3, 4],[5, 6],[7, 8]], [[3, 4, 5, 6], [3, 4, 5, 6]])
+    array([[ 9, 12, 15, 18],
+           [21, 28, 35, 42],
+           [33, 44, 55, 66],
+           [45, 60, 75, 90]])
+
+    >>> lazy_matrix_mul()
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+    >>> lazy_matrix_mul([[1]], 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list
+
+    >>> lazy_matrix_mul(1, [[1]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list
+
+    >>> lazy_matrix_mul(00001, [[1]])
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid token
+
+    >>> lazy_matrix_mul([[1]], -000001)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid token
+
+    >>> lazy_matrix_mul([[1]])
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+
+
+    # **********   SECOND ARGUMENT MISSING ************************************
+    >>> lazy_matrix_mul(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(-1)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(0)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(+0)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(-0)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(2)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(-2)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(10e10)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(-10e10)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(10e1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(-10e1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(10e-1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(-10e-1000)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(-2)
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(float('nan'))
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(float('inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(float('-inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(-)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid syntax
+
+    >>> lazy_matrix_mul(+)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid syntax
+
+    >>> lazy_matrix_mul('1')
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul("1")
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul([])
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul(())
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul({})
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul([1])
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul((1,))
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul({'a':1})
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul([1, 2])
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul((1, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    ###################################################
+    >>> lazy_matrix_mul([[1]], None)
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list
+
+    >>> lazy_matrix_mul([[1]], float('inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list
+
+    >>> lazy_matrix_mul([[1]], float('nan'))
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list
+
+    >>> lazy_matrix_mul([[1]], '1')
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list
+
+    >>> lazy_matrix_mul([[1]], "1")
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list
+
+    >>> lazy_matrix_mul([[1]], [1])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list of lists
+
+    >>> lazy_matrix_mul([[1]], (1,))
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list
+
+    >>> lazy_matrix_mul([[1]], {})
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list
+
+    # ********************** SECOND ARGUMENT WRONG ****************************
+
+    >>> lazy_matrix_mul([[1]], [[]])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_b can't be empty
+
+    >>> lazy_matrix_mul([[]], [[1]])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a can't be empty
+
+    >>> lazy_matrix_mul([[1]], [])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_b can't be empty
+
+    >>> lazy_matrix_mul([], [[1]])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a can't be empty
+
+
+
+
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+    array([[ 7, 10],
+           [15, 22]])
+
+    >>> lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+    array([[13, 16]])
+
+    >>> lazy_matrix_mul(5, [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list
+
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], "hello")
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list
+
+    >>> lazy_matrix_mul([1, 2], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list of lists
+
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [3, 4])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list of lists
+
+    >>> lazy_matrix_mul([], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a can't be empty
+
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[], []])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_b can't be empty
+
+    >>> lazy_matrix_mul([[1, 2], ["string", 4]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a should contain only integers or floats
+
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, "string"], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b should contain only integers or floats
+
+    >>> lazy_matrix_mul([[1, 2, 3], [4, 5]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: each row of m_a must be of the same size
+
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5]])
+    Traceback (most recent call last):
+        ...
+    TypeError: each row of m_b must be of the same size
+
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a and m_b can't be multiplied
+
+    >>> lazy_matrix_mul()
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+    >>> lazy_matrix_mul([[0]])
+    Traceback (most recent call last):
+        ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+    >>> lazy_matrix_mul([[float('inf')]], [[float('inf')]])
+    array([[inf]])
+
+    >>> lazy_matrix_mul([[float('nan')]], [[float('nan')]])
+    array([[nan]])
+
+    # ******************* FIRST ARGUMENT WRONG ********************************
+
+    >>> lazy_matrix_mul(None, [[1]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list
+
+    >>> lazy_matrix_mul([[float('nan')]], [[1]])
+    array([[nan]])
+
+    >>> lazy_matrix_mul([[float('inf')]], [[1]])
+    array([[inf]])
+
+    Test infinity
+    >>> print(lazy_matrix_mul([[float('inf')]], [[float('inf')]]))
+    [[inf]]
+
+    Test nan
+    >>> print(lazy_matrix_mul([[float('nan')]], [[float('nan')]]))
+    [[nan]]
+
+    >>> lazy_matrix_mul(None, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list
+
+
+
