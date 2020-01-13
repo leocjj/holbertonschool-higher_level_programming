@@ -106,15 +106,3 @@ def lazy_matrix_mul(m_a, m_b):
     result_matrix_ = np.array(m_a).dot(np.array(m_b))     # A @ B python >=3.5
 
     return result_matrix_
-
-
-
-
-
-
-
-
-
-
-
-
