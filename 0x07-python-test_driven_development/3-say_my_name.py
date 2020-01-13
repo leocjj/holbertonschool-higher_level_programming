@@ -21,8 +21,8 @@ def say_my_name(first_name, last_name=""):
     """Prints first_name last_name.
 
     Args:
-        param1 (first_name): the first name.
-        param2 (last_name): the second name. By default is "".
+        first_name: the first name.
+        last_name: the second name. By default is "".
 
     Returns:
         None: returns nothing.
