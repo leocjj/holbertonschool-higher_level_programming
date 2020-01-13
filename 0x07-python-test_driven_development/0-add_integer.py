@@ -22,8 +22,8 @@ def add_integer(a, b=98):
     """Return the add of two integers.
 
     Args:
-        param1 (a): The first number to add.
-        param2 (b): The second number to add. By default is 98.
+        a: The first number to add.
+        b: The second number to add. By default is 98.
 
     Returns:
         integer: The return value. The add of two integers.
