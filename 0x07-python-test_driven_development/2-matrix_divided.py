@@ -36,8 +36,8 @@ def matrix_divided(matrix, div):
     """Return a new matrix dividing the original into div.
 
     Args:
-        param1 (matrix): list of lists of integers or floats.
-        param2 (div): divider, integer or float.
+        matrix: list of lists of integers or floats.
+        div: divider, integer or float.
 
     Returns:
         list: list of lists of integers or floats.
