@@ -27,7 +27,7 @@ def print_square(size):
     """prints a square with the character #.
 
     Args:
-        param1 (size): the first name.
+        size: the first name.
 
     Returns:
         None: returns nothing.
