@@ -17,8 +17,7 @@ def add_attribute(obj, attribute, value):
     Returns:
         None: nothing
     """
-    for att in dir(obj):
-        if att == "__setattr__":
-            setattr(obj, attribute, value)
-            return
+    if hasattr(obj, "__dict__"):
+        setattr(obj, attribute, value)
+        return
     raise TypeError("can't add new attribute")
