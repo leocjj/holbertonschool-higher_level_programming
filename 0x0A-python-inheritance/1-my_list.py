@@ -8,6 +8,7 @@ You can assume that all the elements of the list will be of type int
 
 
 class MyList(list):
+    """Class MyList."""
 
     def print_sorted(self):
         """prints the list, but sorted (ascending sort)
