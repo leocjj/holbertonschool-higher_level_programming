@@ -14,8 +14,12 @@ class Square(Rectangle):
     class Square.
     """
     def __init__(self, size):
-        """init method implementation"""
+        """size must be private. No getter or setter
+           size must be a positive integer, validated by integer_validator
+        """
+        self.integer_validator("size", size)
         super().__init__(size, size)
+        self.__size__ = size
 
     def __str__(self):
         """str method implementation
@@ -26,4 +30,4 @@ class Square(Rectangle):
         Returns:
             str: message to return or print.
         """
-        return "[Square] {}/{}".format(self.__width__, self.__height__)
+        return "[Square] {}/{}".format(self.__size, self.__size__)
