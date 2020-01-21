@@ -5,7 +5,7 @@ empty class BaseGeometry.
 """
 
 
-class BaseGeometry():
+class BaseGeometry:
     """class BaseGeometry.
 
     empty class BaseGeometry.
