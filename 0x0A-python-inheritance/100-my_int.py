@@ -20,10 +20,6 @@ class MyInt(int):
         Returns:
             bool: True if x is different from y
         """
-        if type(int(self)) != int:
-            exit(1)
-        if type(int(other)) != int:
-            exit(1)
         if int(self) == int(other):
             return False
         else:
@@ -39,10 +35,6 @@ class MyInt(int):
         Returns:
             bool: True if x is different from y
         """
-        if type(int(self)) != int:
-            exit(1)
-        if type(int(other)) != int:
-            exit(1)
         if int(self) != int(other):
             return False
         else:
