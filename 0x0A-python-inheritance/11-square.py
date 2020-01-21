@@ -14,6 +14,7 @@ class Square(Rectangle):
     class Square.
     """
     def __init__(self, size):
+        """init method implementation"""
         super().__init__(size, size)
 
     def __str__(self):
