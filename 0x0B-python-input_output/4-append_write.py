@@ -18,7 +18,7 @@ def append_write(filename="", text=""):
         text: text to write to a file.
 
     Returns:
-        int: number of lines of a text file
+        int: number of characters added
     """
     num_chars_added = 0
     with open(filename, 'a') as f:

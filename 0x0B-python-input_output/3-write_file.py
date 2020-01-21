@@ -18,7 +18,7 @@ def write_file(filename="", text=""):
         text: text to write to a file.
 
     Returns:
-        int: number of lines of a text file
+        int: number of characters written
     """
     num_chars_written = 0
     with open(filename, 'w') as f:

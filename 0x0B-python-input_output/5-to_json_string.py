@@ -14,6 +14,6 @@ def to_json_string(my_obj):
         my_obj: the file name to open.
 
     Returns:
-        int: number of lines of a text file
+        str: JSON representation of an object
     """
     return json.dumps(my_obj)

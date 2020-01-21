@@ -18,7 +18,7 @@ def read_lines(filename="", nb_lines=0):
         nb_lines: number of lines to print
 
     Returns:
-        int: number of lines of a text file
+        None: nothing
     """
     if nb_lines <= 0:
         with open(filename) as f:

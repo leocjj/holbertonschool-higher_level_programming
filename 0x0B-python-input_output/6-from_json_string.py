@@ -15,6 +15,6 @@ def from_json_string(my_str):
         my_str: the file name to open.
 
     Returns:
-        int: number of lines of a text file
+        str: Object, Python data structure
     """
     return json.loads(my_str)
