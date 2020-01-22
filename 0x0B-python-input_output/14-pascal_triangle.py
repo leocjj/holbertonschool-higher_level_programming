@@ -20,5 +20,4 @@ def pascal_triangle(n):
             row += [num]
             num = num * (i - j) // j
         pt += [row]
-    print(pt)
     return pt
