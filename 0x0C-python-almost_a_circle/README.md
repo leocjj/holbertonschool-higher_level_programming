@@ -3,15 +3,35 @@
 0x0C-python-almost_a_circle
 
 
+## Background Context
+
+  In this project, you will review everything about Python:
+
+    Import
+    Exceptions
+    Class
+    Private attribute
+    Getter/Setter
+    Class method
+    Static method
+    Inheritance
+    Unittest
+    Read/Write file
+
+  You will also learn about:
+
+    args and kwargs
+    Serialization/Deserialization
+    JSON
+
+
 ## Read or watch:
 
 
-    7.2. Reading and Writing Files
-    8.7. Predefined Clean-up Actions
-    Dive Into Python 3: Chapter 11. Files (until “11.4 Binary Files” (included))
+    args/kwargs
     JSON encoder and decoder
-    Learn to Program 8 : Reading / Writing Files
-    Automate the Boring Stuff with Python (ch. 8 p 180-183 and ch. 14 p 326-333)
+    unittest module
+    Python test cheatsheet
 
 
 ## Learning Objectives
@@ -23,20 +43,13 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 ### General
 
 
+    What is Unit testing and how to implement it in a large project
+    How to serialize and deserialize a Class
+    How to write and read a JSON file
+    What is *args and how to use it
+    What is **kwargs and how to use it
+    How to handle named arguments in a function
 
-    Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
-    How to open a file
-    How to write text in a file
-    How to read the full content of a file
-    How to read a file line by line
-    How to move the cursor in a file
-    How to make sure a file is closed after using it
-    What is and how to use the with statement
-    What is JSON
-    What is serialization
-    What is deserialization
-    How to convert a Python data structure to a JSON string
-    How to convert a JSON string to a Python data structure
 
 
 ## Requirements
@@ -45,37 +58,56 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 
     Allowed editors: vi, vim, emacs
+    All your files will be interpreted/compiled on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+    All your files should end with a new line
+    The first line of all your files should be exactly #!/usr/bin/python3
+    A README.md file, at the root of the folder of the project, is mandatory
+    Your code should use the PEP 8 style (version 1.7.*)
+    All your files must be executable
+    The length of your files will be tested using wc
+    All your modules should be documented: python3 -c 'print(__import__("my_module").__doc__)'
+    All your classes should be documented: python3 -c 'print(__import__("my_module").MyClass.__doc__)'
+    All your functions (inside and outside a class) should be documented: python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+
+### Python Unit Tests
+
+    Allowed editors: vi, vim, emacs
     All your files should end with a new line
     All your test files should be inside a folder tests
-    All your test files should be text files (extension: .txt)
-    All your tests should be executed by using this command: python3 -m doctest ./tests/*
-    All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
-    All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
-    All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
-    We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+    You have to use the unittest module
+    All your test files should be python files (extension: .py)
+    All your test files and folders should start with test_
+    Your file organization in the tests folder should be the same as your project: ex: for models/base.py, unit tests must be in: tests/test_models/test_base.py
+    All your tests should be executed by using this command: python3 -m unittest discover tests
+    You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base.py
+    We strongly encourage you to work together on test cases so that you don’t miss any edge case
 
 
 ## Tasks
 
- 0. Read file mandatory 
- 1. Number of lines mandatory 
- 2. Read n lines mandatory 
- 3. Write to a file mandatory 
- 4. Append to a file mandatory 
- 5. To JSON string mandatory 
- 6. From JSON string to Object mandatory
- 7. Save Object to a file mandatory 
- 8. Create object from a JSON file mandatory
- 9. Load, add, save mandatory
- 10. Class to JSON mandatory  
- 11. Student to JSON mandatory 
- 12. Student to JSON with filter mandatory 
- 13. Student to disk and reload mandatory 
- 14. Pascal's Triangle mandatory
- 15. Search and update #advanced 
- 16. Log parsing #advanced
- 17. Hack the VM #advanced 
-  
+ 0. If it's not tested it doesn't work mandatory 
+ 1. Base class mandatory 
+ 2. First Rectangle mandatory 
+ 3. Validate attributes mandatory 
+ 4. Area first mandatory 
+ 5. Display #0 mandatory 
+ 6. __str__ mandatory 
+ 7. Display #1 mandatory 
+ 8. Update #0 mandatory 
+ 9. Update #1 mandatory 
+ 10. And now, the Square! mandatory 
+ 11. Square size mandatory
+ 12. Square update mandatory
+ 13. Rectangle instance to dictionary representation mandatory
+ 14. Square instance to dictionary representation mandatory
+ 15. Dictionary to JSON string mandatory
+ 16. JSON string to file mandatory
+ 17. JSON string to dictionary mandatory
+ 18. Dictionary to Instance mandatory
+ 19. File to instances mandatory
+ 20. JSON ok, but CSV? #advanced
+ 21. Let's draw it #advanced
+
 
 
 ### Coding style tests
@@ -93,4 +125,4 @@ sudo apt-get install python3-pep8
 ## Author
 
 * **Leonardo Calderon J.** - *Initial work* - [LeoCJJ](https://github.com/leocjj)
-01/20/2020
+01/23/2020
