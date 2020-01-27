@@ -37,6 +37,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """width setter"""
+        self.validator('width', value)
         self.__width = value
 
     @property
@@ -47,6 +48,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """height setter"""
+        self.validator('height', value)
         self.__height = value
 
     @property
@@ -57,6 +59,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """x setter"""
+        self.validator('x', value)
         self.__x = value
 
     @property
@@ -67,4 +70,16 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """y setter"""
+        self.validator('y', value)
         self.__y = value
+
+    def validator(self, var, value):
+        """Validator method"""
+        if type(value) != int:
+            raise TypeError('{} must be an integer'.format(var))
+
+        if (var == 'width' or var == 'height') and (value <= 0):
+            raise ValueError('{} must be > 0'.format(var))
+
+        if (var == 'x' or var == 'y') and (value < 0):
+            raise ValueError('{} must be >= 0'.format(var))
