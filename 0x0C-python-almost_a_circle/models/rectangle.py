@@ -100,7 +100,7 @@ class Rectangle(Base):
                 str(self.y) + ' - ' + str(self.width) + '/' +
                 str(self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update parameters"""
         if args:
             if len(args) >= 1:
@@ -113,3 +113,6 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
