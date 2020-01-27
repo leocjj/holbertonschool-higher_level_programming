@@ -92,3 +92,9 @@ class Rectangle(Base):
         """Print rectangle with #"""
         for i in range(self.height):
             print('#' * self.width)
+
+    def __str__(self):
+        """Print rectangle string"""
+        return ('[Rectangle] (' + str(self.id) + ') ' + str(self.__x) + '/' +
+                str(self.__y) + ' - ' + str(self.__width) + '/' +
+                str(self.__height))
