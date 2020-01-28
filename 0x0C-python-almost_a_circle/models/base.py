@@ -13,6 +13,7 @@ Class Base:
 """
 import json
 from os import path
+import csv
 
 
 class Base:
@@ -74,3 +75,26 @@ class Base:
                 result += [cls.create(**item)]
             return result
         return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes in CSV"""
+        filename = cls.__name__ + '.csv'
+        list_to_cvs = []
+        if list_objs:
+            if cls.__name__ == 'Rectangle':
+                for obj in list_objs:
+                    list_to_cvs += [[obj.id, obj.width, obj.height, obj.x,
+                                     obj.y]]
+            else:
+                for obj in list_objs:
+                    list_to_cvs += [[obj.id, obj.size, obj.x, obj.y]]
+            print(list_to_cvs)
+            with open(filename, 'w', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerows(list_to_cvs)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes in CSV"""
+        pass
