@@ -25,7 +25,6 @@ class Square(Rectangle):
         """Init Rectangle instance."""
         super().__init__(size, size, x, y, id)
 
-
     def __str__(self):
         """Print rectangle string"""
         return ('[Square] (' + str(self.id) + ') ' + str(self.x) + '/' +
