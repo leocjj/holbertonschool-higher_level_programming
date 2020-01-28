@@ -29,3 +29,15 @@ class Square(Rectangle):
         """Print rectangle string"""
         return ('[Square] (' + str(self.id) + ') ' + str(self.x) + '/' +
                 str(self.y) + ' - ' + str(self.width))
+
+    @property
+    def size(self):
+        """size getter"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """size setter"""
+        self.validator('width', value)
+        self.width = value
+        self.height = value
