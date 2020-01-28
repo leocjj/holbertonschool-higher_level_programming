@@ -12,6 +12,7 @@ Class Base:
         public instance attribute id
 """
 import json
+from os import path
 
 
 class Base:
@@ -35,7 +36,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Write the JSON string representation of list_objs to a file"""
+        """write the JSON string representation of list_objs to a file"""
         filename = cls.__name__ + '.json'
         dictionaries = []
         if list_objs:
@@ -46,17 +47,30 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Return the list of the JSON string representation"""
+        """return the list of the JSON string representation"""
         if json_string:
             return json.loads(json_string)
         return []
 
     @classmethod
     def create(cls, **dictionary):
-        """Return an instance with all attributes already set"""
+        """return an instance with all attributes already set"""
         if cls.__name__ == 'Rectangle':
             new_base = cls(1, 1)
         else:
             new_base = cls(1)
         new_base.update(**dictionary)
         return new_base
+
+    @classmethod
+    def load_from_file(cls):
+        """return a list of instances"""
+        filename = cls.__name__ + '.json'
+        result = []
+        if path.isfile(filename):
+            with open(filename, 'r') as f:
+                my_list = cls.from_json_string(f.read())
+            for item in my_list:
+                result += [cls.create(**item)]
+            return result
+        return []
