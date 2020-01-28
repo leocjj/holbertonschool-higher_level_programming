@@ -50,3 +50,13 @@ class Base:
         if json_string:
             return json.loads(json_string)
         return []
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Return an instance with all attributes already set"""
+        if cls.__name__ == 'Rectangle':
+            new_base = cls(1, 1)
+        else:
+            new_base = cls(1)
+        new_base.update(**dictionary)
+        return new_base
