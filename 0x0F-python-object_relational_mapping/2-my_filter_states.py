@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Write a script that lists all states with a name starting with N (upper N) from
-the database hbtn_0e_0_usa
+Write a script that takes in an argument and displays all values in the states
+table of hbtn_0e_0_usa where name matches the argument.
 """
 
 if __name__ == "__main__":
@@ -15,7 +15,7 @@ if __name__ == "__main__":
                          passwd=argv[2], db=argv[3], charset="utf8")
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name=%s", (argv[4],))
+    cur.execute("SELECT * FROM states WHERE name='{}'".format(argv[4]))
 
     query_rows = cur.fetchall()
     for row in query_rows:
