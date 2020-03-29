@@ -15,7 +15,7 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states ORDER BY id ASC")
 
     value = cur.fetchone()
-    while value != None:
+    while value is not None:
         print (value)
         value = cur.fetchone()
 
