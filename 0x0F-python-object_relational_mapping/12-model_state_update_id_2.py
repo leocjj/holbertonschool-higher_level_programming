@@ -22,7 +22,7 @@ if __name__ == "__main__":
     # Create a new session
     session = Session()
 
-    # Create, add and commit new object to DB.
+    # Obtain an object, modify it and commit it to DB.
     two = session.query(State).filter_by(id=2).first()
     two.name = 'New Mexico'
     session.commit()
