@@ -27,15 +27,14 @@ def find_peak(list_of_integers):
     if size == 1:
         return l[1]
 
-    lo = l[0]
-    hi = l[size - 1]
-
+    lo = 0
+    hi = size - 1
     while lo < hi:
         mid = (lo + hi) // 2
-        if l[mid - 1] < l[mid] and l[mid] > l[mid + 1]:
-            return l[mid]
-        elif l[mid - 1] > l[mid]:
-            hi = mid - 1
-        elif l[mid] < l[mid + 1]:
+        if l[mid] <= l[mid + 1]:
             lo = mid + 1
+        elif l[mid - 1] >= l[mid]:
+            hi = mid - 1
+        elif l[mid - 1] <= l[mid] and l[mid] >= l[mid + 1]:
+            return l[mid]
     return l[lo]
