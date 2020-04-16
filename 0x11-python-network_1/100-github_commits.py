@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-Use the Github API to list the 10 most recent commits
+script that takes your Github credentials (username and password) and uses
+the Github API to display your id
 """
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import requests
     from sys import argv
     r = requests.get('https://api.github.com/repos/{}/{}/commits'
