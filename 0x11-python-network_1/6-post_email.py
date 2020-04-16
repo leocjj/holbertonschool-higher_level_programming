@@ -10,6 +10,5 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-    r = requests.get(argv[1])
     r = requests.post(argv[1], {'email': argv[2]})
     print(r.text)
