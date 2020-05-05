@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /*
-script that prints x times “C is fun”
+script that prints a square
 */
 let x = '';
 const times = Number(process.argv[2]);
