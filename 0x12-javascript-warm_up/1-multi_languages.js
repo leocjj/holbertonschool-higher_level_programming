@@ -1,7 +1,6 @@
 #!/usr/bin/node
 /*
-script that takes your Github credentials (username and password) and uses
-the Github API to display your id
+Write a script that prints 3 lines:
 */
 console.log('C is fun');
 console.log('Python is cool');
