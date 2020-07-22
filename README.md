@@ -1,4 +1,4 @@
-# holbertonschool-higher_level_programming
+# Holberton School Higher Level Programming
 
 ### Coding style tests
 
@@ -14,5 +14,10 @@ sudo apt-get install python3-pep8
 
 ## Author
 
-* **Leonardo Calderon J.** - *Initial work* - [LeoCJJ](https://github.com/leocjj)
-12/09/2019
+**Leonardo Calderon J.** - *Initial work* 
+
+# [LeoCJJ](https://github.com/leocjj)
+
+[Web Page](http://leocjj.tech)
+
+2019-2020
